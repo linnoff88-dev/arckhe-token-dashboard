@@ -27,7 +27,7 @@ Sem `pip install`. Sem Node.js. Sem etapa de build.
 ## InêÂ­cio rêÂ¡pido
 
 ```bash
-git clone https://github.com/inematds/token-dashboard.git
+git clone https://github.com/linnoff88-dev/token-dashboard.git
 cd token-dashboard
 python3 cli.py dashboard
 ```

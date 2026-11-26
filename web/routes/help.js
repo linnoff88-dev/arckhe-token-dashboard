@@ -103,7 +103,7 @@ export default async function (root) {
 
       <h3>Links</h3>
       <ul>
-        <li><a href="https://github.com/inematds/token-dashboard" target="_blank">Repositório no GitHub</a></li>
+        <li><a href="https://github.com/linnoff88-dev/token-dashboard" target="_blank">Repositório no GitHub</a></li>
         <li>Documentaçêo adicional: <code>docs/KNOWN_LIMITATIONS.md</code>, <code>docs/claude-mem-tuning.md</code>, <code>CONTRIBUTING.md</code></li>
       </ul>
     </div>`;
