@@ -31,8 +31,8 @@ export default async function (root) {
 
       <hr class="divider">
 
-      <h3>Intervalo de atualização (scan)</h3>
-      <p class="muted" style="margin:0 0 12px">A cada quantos segundos o dashboard re-varre o disco em busca de novas sessões. Vale só para esta execução do servidor — para tornar permanente, exporte <code>TOKEN_DASHBOARD_SCAN_INTERVAL</code>.</p>
+      <h3>Intervalo de atualizaçêo (scan)</h3>
+      <p class="muted" style="margin:0 0 12px">A cada quantos segundos o dashboard re-varre o disco em busca de novas sessões. Vale só para esta execuçêo do servidor — para tornar permanente, exporte <code>TOKEN_DASHBOARD_SCAN_INTERVAL</code>.</p>
       <div class="flex">
         <select id="interval">
           ${INTERVALS.map(s => `<option value="${s}" ${s==Math.round(settings.scan_interval)?'selected':''}>${s >= 60 ? (s/60) + ' min' : s + ' s'}</option>`).join('')}
@@ -45,11 +45,11 @@ export default async function (root) {
 
       <h3>Plugin claude-mem</h3>
       ${mem.available ? `
-        <p class="muted" style="margin:0 0 12px">Controla quanto contexto o plugin <code>claude-mem</code> injeta no início de cada sessão. Mais contexto = mais input tokens cobrados. Veja <a href="#/help">Ajuda</a> para o caso de uso real.</p>
+        <p class="muted" style="margin:0 0 12px">Controla quanto contexto o plugin <code>claude-mem</code> injeta no início de cada sessêo. Mais contexto = mais input tokens cobrados. Veja <a href="#/help">Ajuda</a> para o caso de uso real.</p>
         <table style="max-width:680px">
           <tbody>
             <tr>
-              <td><strong>Observations injetadas</strong><br><span class="muted" style="font-size:12px">Quantas observations passadas o plugin coloca no contexto da próxima sessão (0 = desligado).</span></td>
+              <td><strong>Observations injetadas</strong><br><span class="muted" style="font-size:12px">Quantas observations passadas o plugin coloca no contexto da próxima sessêo (0 = desligado).</span></td>
               <td><input id="mem-obs" type="number" min="0" max="500" value="${mem.context_observations}" style="width:90px"></td>
             </tr>
             <tr>
@@ -57,7 +57,7 @@ export default async function (root) {
               <td><input id="mem-sess" type="number" min="0" max="100" value="${mem.context_session_count}" style="width:90px"></td>
             </tr>
             <tr>
-              <td><strong>Resumo da última sessão</strong><br><span class="muted" style="font-size:12px">Inclui o resumo completo da última sessão deste projeto.</span></td>
+              <td><strong>Resumo da última sessêo</strong><br><span class="muted" style="font-size:12px">Inclui o resumo completo da última sessêo deste projeto.</span></td>
               <td><label><input id="mem-last" type="checkbox" ${mem.context_show_last_summary?'checked':''}> ativado</label></td>
             </tr>
           </tbody>
@@ -66,7 +66,7 @@ export default async function (root) {
           <button class="primary" id="save-mem">Salvar claude-mem</button>
           <span id="msg-mem" class="muted"></span>
         </div>
-      ` : `<p class="muted">Plugin <code>claude-mem</code> não detectado em <code>~/.claude-mem/settings.json</code>.</p>`}
+      ` : `<p class="muted">Plugin <code>claude-mem</code> nêo detectado em <code>~/.claude-mem/settings.json</code>.</p>`}
 
       <hr class="divider">
 
@@ -141,7 +141,7 @@ export default async function (root) {
         context_show_last_summary: $('#mem-last').checked,
       };
       const r = await fetch('/api/settings/claude-mem', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-      if (r.ok) flash('msg-mem', 'Salvo. Vale a partir da próxima sessão do Claude Code.');
+      if (r.ok) flash('msg-mem', 'Salvo. Vale a partir da próxima sessêo do Claude Code.');
       else flash('msg-mem', 'Erro ao salvar.', true);
     });
   }

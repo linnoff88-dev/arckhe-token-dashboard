@@ -60,7 +60,7 @@ export default async function (root) {
 
   root.innerHTML = `
     <div class="flex" style="margin-bottom:14px">
-      <h2 style="margin:0;font-size:16px;letter-spacing:-0.01em">Visão geral</h2>
+      <h2 style="margin:0;font-size:16px;letter-spacing:-0.01em">Visêo geral</h2>
       <span class="muted" style="font-size:12px">${range.days ? `últimos ${range.days} dias` : 'todo o período'}</span>
       <div class="spacer"></div>
       ${rangeTabs}
@@ -83,7 +83,7 @@ export default async function (root) {
     <details class="card glossary" style="margin-top:16px">
       <summary><h3 style="display:inline-block;margin:0">O que esses números significam?</h3><span class="muted" style="font-size:12px">— clique para expandir</span></summary>
       <dl>
-        <dt>Sessão</dt><dd>Uma execução do Claude Code (do <code>claude</code> até sair). Cada sessão é um único arquivo <code>.jsonl</code>.</dd>
+        <dt>Sessêo</dt><dd>Uma execuçêo do Claude Code (do <code>claude</code> até sair). Cada sessêo é um único arquivo <code>.jsonl</code>.</dd>
         <dt>Turno</dt><dd>Uma mensagem que você enviou ao Claude. Cada turno dispara uma resposta (possivelmente com chamadas de ferramenta no meio).</dd>
         <dt>Tokens de entrada</dt><dd>O texto novo que você (e resultados de ferramenta) enviou ao Claude neste turno. Cobrado na taxa cheia de input.</dd>
         <dt>Tokens de saída</dt><dd>O texto que o Claude escreveu de volta. Cobrado na taxa mais alta — geralmente o maior driver de custo por turno.</dd>
@@ -101,7 +101,7 @@ export default async function (root) {
       </div>
       <div class="card">
         <h3>Cache lido por dia</h3>
-        <p class="muted" style="margin:-4px 0 10px;font-size:12px"><b>Cache lido</b> é o reuso barato de coisas que o Claude já viu (como seu CLAUDE.md). Custa ~10× menos que tokens de input normais — números altos aqui são bons.</p>
+        <p class="muted" style="margin:-4px 0 10px;font-size:12px"><b>Cache lido</b> é o reuso barato de coisas que o Claude já viu (como seu CLAUDE.md). Custa ~10× menos que tokens de input normais — números altos aqui sêo bons.</p>
         <div id="ch-daily-cache" style="height:260px"></div>
       </div>
     </div>
@@ -110,7 +110,7 @@ export default async function (root) {
       <div class="card"><h3>Tokens por projeto</h3><div id="ch-projects" style="height:320px"></div></div>
       <div class="card">
         <h3>Uso de tokens por modelo</h3>
-        <p class="muted" style="margin:-4px 0 4px;font-size:12px">Participação de tokens faturáveis por modelo do Claude.</p>
+        <p class="muted" style="margin:-4px 0 4px;font-size:12px">Participaçêo de tokens faturáveis por modelo do Claude.</p>
         <div id="ch-model" style="height:300px"></div>
       </div>
     </div>

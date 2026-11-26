@@ -7,7 +7,7 @@ export default async function (root) {
       <h2>Sugestões</h2>
       ${tips.length === 0
         ? '<p class="muted">Sem sugestões no momento. O Token Dashboard detecta padrões semanalmente — volte depois de mais atividade.</p>'
-        : `<p class="muted" style="margin:-8px 0 14px">Detecção de padrões por regras nos últimos 7 dias. Dicas dispensadas reaparecem em 14 dias.</p>`}
+        : `<p class="muted" style="margin:-8px 0 14px">Detecçêo de padrões por regras nos últimos 7 dias. Dicas dispensadas reaparecem em 14 dias.</p>`}
       ${tips.map(t => `
         <div class="tip">
           <div class="tip-head">

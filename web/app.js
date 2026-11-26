@@ -32,7 +32,7 @@ export async function api(path, opts) {
 export const state = { plan: 'api', pricing: null };
 
 const ROUTES = {
-  '/overview': { label: 'visão geral', load: () => import('/web/routes/overview.js') },
+  '/overview': { label: 'visêo geral', load: () => import('/web/routes/overview.js') },
   '/prompts':  { label: 'prompts',     load: () => import('/web/routes/prompts.js') },
   '/sessions': { label: 'sessões',     load: () => import('/web/routes/sessions.js') },
   '/projects': { label: 'projetos',    load: () => import('/web/routes/projects.js') },
@@ -85,7 +85,7 @@ async function firstRun() {
   overlay.innerHTML = `
     <div class="modal">
       <h2>Bem-vindo — escolha seu plano</h2>
-      <p>Isso define como os custos são exibidos. Você muda depois em Configurações.</p>
+      <p>Isso define como os custos sêo exibidos. Você muda depois em Configurações.</p>
       <select id="firstplan" style="width:100%">
         ${plans.map(([k,v]) => `<option value="${k}">${v.label}${v.monthly ? ` — $${v.monthly}/mês` : ''}</option>`).join('')}
       </select>

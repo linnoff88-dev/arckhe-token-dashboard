@@ -5,7 +5,7 @@ export default async function (root) {
   root.innerHTML = `
     <div class="card">
       <h2>Projetos</h2>
-      <p class="muted" style="margin:-8px 0 14px">Ordenado pelo gasto em tokens faturáveis. Cache lido é cobrado mais barato, então colunas altas de cache são boas.</p>
+      <p class="muted" style="margin:-8px 0 14px">Ordenado pelo gasto em tokens faturáveis. Cache lido é cobrado mais barato, entêo colunas altas de cache sêo boas.</p>
       <table>
         <thead><tr><th>projeto</th><th class="num">sessões</th><th class="num">turnos</th><th class="num">tokens faturáveis</th><th class="num">cache lido</th></tr></thead>
         <tbody>

@@ -83,7 +83,7 @@ def repeated_target_tips(db_path, today_iso: Optional[str] = None) -> List[dict]
             out.append({
                 "key": key, "category": "repeat-file",
                 "title": f"{row['target']} lido {row['n']} vezes",
-                "body": f"Este arquivo foi aberto {row['n']} vezes em {row['sessions']} sessões nos últimos 7 dias. Um resumo no CLAUDE.md ou uma leitura por sessão evitaria as repetições.",
+                "body": f"Este arquivo foi aberto {row['n']} vezes em {row['sessions']} sessões nos últimos 7 dias. Um resumo no CLAUDE.md ou uma leitura por sessêo evitaria as repetições.",
                 "scope": row["target"],
             })
         for row in c.execute("""
@@ -171,7 +171,7 @@ def outlier_tips(db_path, today_iso: Optional[str] = None) -> List[dict]:
                 out.append({
                     "key": key, "category": "subagent-outlier",
                     "title": f"Subagente {row['agent_id']} tem outliers de custo",
-                    "body": f"Maior invocação usou {int(row['max_t']):,} tokens vs média de {int(row['mean_t']):,}. Vale checar o que essas fizeram de diferente.",
+                    "body": f"Maior invocaçêo usou {int(row['max_t']):,} tokens vs média de {int(row['mean_t']):,}. Vale checar o que essas fizeram de diferente.",
                     "scope": row["agent_id"],
                 })
     return out

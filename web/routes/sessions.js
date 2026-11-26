@@ -12,7 +12,7 @@ async function renderList(root) {
     <div class="card">
       <h2>Sessões</h2>
       <table>
-        <thead><tr><th>início</th><th>projeto</th><th class="num">turnos</th><th class="num">tokens</th><th>sessão</th></tr></thead>
+        <thead><tr><th>início</th><th>projeto</th><th class="num">turnos</th><th class="num">tokens</th><th>sessêo</th></tr></thead>
         <tbody>
           ${list.map(s => `
             <tr>
@@ -49,7 +49,7 @@ async function renderSession(root, id) {
   root.innerHTML = `
     <div class="card">
       <h2 style="display:flex;align-items:center">
-        <span>Sessão ${fmt.htmlSafe(id.slice(0,8))}…</span>
+        <span>Sessêo ${fmt.htmlSafe(id.slice(0,8))}…</span>
         <span class="spacer"></span>
         <a href="#/sessions" class="muted">← todas as sessões</a>
       </h2>

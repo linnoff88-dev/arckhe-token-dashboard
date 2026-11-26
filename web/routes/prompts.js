@@ -46,7 +46,7 @@ export default async function (root) {
           <th>modelo</th>
           <th class="num">tokens</th>
           <th class="num">cache ld</th>
-          <th>sessão</th>
+          <th>sessêo</th>
         </tr></thead>
         <tbody>
           ${rows.map((r,i) => `
@@ -84,7 +84,7 @@ export default async function (root) {
             <span class="muted">${fmt.ts(r.timestamp)}</span>
             <span class="muted">${fmt.int(r.billable_tokens)} faturáveis · ${fmt.int(r.cache_read_tokens)} cache ld · ~${fmt.usd4(r.estimated_cost_usd)} custo cache</span>
             <span class="spacer"></span>
-            <a href="#/sessions/${encodeURIComponent(r.session_id)}">Abrir sessão →</a>
+            <a href="#/sessions/${encodeURIComponent(r.session_id)}">Abrir sessêo →</a>
           </div>
         </div>`;
       drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

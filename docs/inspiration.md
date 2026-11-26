@@ -1,14 +1,14 @@
-# Inspiração: phuryn/claude-usage
+# Inspiraçêo: phuryn/claude-usage
 
 Fonte: https://github.com/phuryn/claude-usage
 
 ## O que faz
 
-Um dashboard local que lê as transcrições JSONL de sessão do Claude Code e mostra uso de tokens, estimativas de custo e histórico de sessões. Funciona nos planos API, Pro e Max.
+Um dashboard local que lê as transcrições JSONL de sessêo do Claude Code e mostra uso de tokens, estimativas de custo e histórico de sessões. Funciona nos planos API, Pro e Max.
 
 ## Stack técnica
 
-- **Python 3.8+**, somente biblioteca padrão (sem pip install, sem venv)
+- **Python 3.8+**, somente biblioteca padrêo (sem pip install, sem venv)
 - `sqlite3` — armazenamento persistente em `~/.claude/usage.db`
 - `http.server` — serve um dashboard HTML/JS de página única
 - Chart.js no frontend para as visualizações
@@ -30,29 +30,29 @@ Um dashboard local que lê as transcrições JSONL de sessão do Claude Code e m
 ## O que captura
 
 - Claude Code CLI (`claude` no terminal)
-- Extensão do VS Code (sidebar do Claude Code)
+- Extensêo do VS Code (sidebar do Claude Code)
 - Sessões Code despachadas
 
-## O que NÃO captura
+## O que NêO captura
 
 - **Sessões Cowork** — server-side, sem JSONL local
-- Cálculo de custo para nomes de modelo não-padrão (só dá match em `opus`/`sonnet`/`haiku` — outros mostram `n/a`)
+- Cálculo de custo para nomes de modelo nêo-padrêo (só dá match em `opus`/`sonnet`/`haiku` — outros mostram `n/a`)
 
 ## Formato dos dados
 
 Cada linha do JSONL é uma mensagem. O uso fica em `message.usage`:
 - tokens de input, tokens de output
-- tokens de criação de cache, tokens de leitura de cache
+- tokens de criaçêo de cache, tokens de leitura de cache
 
 Identificador do modelo em `message.model`.
 
-## Limitações que vale endereçar na nossa versão
+## Limitações que vale endereçar na nossa versêo
 
 1. **Custo para usuários Pro/Max é enganoso** — mostra taxas de API, mas esses usuários pagam uma assinatura fixa. O original admite isso no README.
 2. **Modelos desconhecidos mostram `n/a`** — sem pricing de fallback, sem jeito de adicionar pricing customizado.
 3. **UI é uma página HTML única com Chart.js** — funcional, mas datada.
-4. **Sem drill-down de sessão** — não dá pra clicar facilmente em uma sessão e ver o que aconteceu.
-5. **Sem comparação por projeto** — os agregados são globais.
-6. **Auto-refresh de 30 segundos** apenas; sem tailing ao vivo da sessão ativa.
+4. **Sem drill-down de sessêo** — nêo dá pra clicar facilmente em uma sessêo e ver o que aconteceu.
+5. **Sem comparaçêo por projeto** — os agregados sêo globais.
+6. **Auto-refresh de 30 segundos** apenas; sem tailing ao vivo da sessêo ativa.
 
-Esses são candidatos (não compromissos) para o que nossa versão poderia fazer melhor.
+Esses sêo candidatos (nêo compromissos) para o que nossa versêo poderia fazer melhor.
